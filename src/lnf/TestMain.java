@@ -8,14 +8,14 @@ import sbin.SBinDataCollector;
 
 public class TestMain {
 
-	static int numSimulations = 100;
+	static int numSimulations = 10; //default 100
 
 	public static void main(String args[]) throws InstantiationException, IllegalAccessException,
 			IllegalArgumentException, InvocationTargetException, NoSuchMethodException, SecurityException {
 
 		double epsilons[] = { 0.1, 0.2, 0.5, 1, 2, 3, 4, 5 };
 		double deltas[] = { Math.pow(0.1, 12) };
-		String dataNames[] = { "census", "foursquare", "localization", "rfid" };
+		String dataNames[] = {"rfid", "localization", "foursquare", "census"};
 
 		for (String dataName : dataNames) {
 			for (double epsilon : epsilons) {
